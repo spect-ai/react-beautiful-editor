@@ -1,5 +1,12 @@
 # @avp1598/react-beautiful-editor
 
+## 0.2.0
+
+### Minor Changes
+
+- 8ad28cf: Add general embed
+- c6d1fb8: Add embed
+
 ## 0.1.1
 
 ### Patch Changes
