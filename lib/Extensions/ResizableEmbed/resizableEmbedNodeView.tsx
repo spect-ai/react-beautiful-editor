@@ -131,6 +131,16 @@ const ResizableEmbedNodeView = ({
               }}
             ></iframe>
           )}
+          {embedType === "general" && (
+            <iframe
+              src={src}
+              title="General Embed"
+              style={{
+                width: "100%",
+                height: "100%",
+              }}
+            ></iframe>
+          )}
         </Rnd>
       ) : (
         <div

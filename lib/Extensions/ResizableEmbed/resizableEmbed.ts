@@ -9,7 +9,7 @@ export interface ResizableEmbedOptions {
 
 type SetEmbedOptions = {
   src: string;
-  embedType: "youtube" | "figma" | "twitter";
+  embedType: "youtube" | "figma" | "twitter" | "general";
   width?: string;
   height?: string;
 };

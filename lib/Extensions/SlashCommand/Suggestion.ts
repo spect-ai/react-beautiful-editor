@@ -110,10 +110,33 @@ export default {
         },
       },
       {
+        name: "General Embed",
+        id: "general",
+        description: "Embed any url on the web",
+        image:
+          "https://ik.imagekit.io/spectcdn/embed_icon.png?updatedAt=1687095404653",
+        command: ({ editor, range }: CommandProps) => {
+          editor
+            .chain()
+            .focus()
+            .deleteRange(range)
+            .setEmbed({
+              src: "",
+              embedType: "general",
+            })
+            .run();
+          editor.commands.insertContentAt(
+            editor.state.selection.$anchor.pos + 1,
+            "<p></p>"
+          );
+        },
+      },
+      {
         name: "Youtube",
         id: "youtube",
         description: "Embed a youtube video",
-        image: "https://ik.imagekit.io/spectcdn/editor_yt.png",
+        image:
+          "https://ik.imagekit.io/spectcdn/YT_3.png_width_1000_height_1000?updatedAt=1687095433566",
         command: ({ editor, range }: CommandProps) => {
           editor
             .chain()
@@ -174,7 +197,7 @@ export default {
       },
     ]
       .filter((item) => item.name.toLowerCase().startsWith(query.toLowerCase()))
-      .slice(0, 10);
+      .slice(0, 12);
   },
 
   render: () => {
