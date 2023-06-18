@@ -110,7 +110,7 @@ export default {
         },
       },
       {
-        name: "General Embed",
+        name: "Embed",
         id: "general",
         description: "Embed any url on the web",
         image:
