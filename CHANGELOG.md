@@ -1,5 +1,11 @@
 # @avp1598/react-beautiful-editor
 
+## 0.2.1
+
+### Patch Changes
+
+- 7b1708f: Let general embeds have different aspect ratios
+
 ## 0.2.0
 
 ### Minor Changes
