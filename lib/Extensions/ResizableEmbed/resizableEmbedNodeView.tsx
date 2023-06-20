@@ -99,16 +99,42 @@ const ResizableEmbedNodeView = ({
             position: "relative",
           }}
           onResize={(e, direction, ref) => {
-            if (editor.isEditable) {
-              setWidth(ref.style.width);
-              setHeight(ref.style.height);
-              updateAttributes({
-                width: ref.style.width,
-                height: ref.style.height,
-              });
+            console.log({
+              width: ref.style.width,
+              height: ref.style.height,
+              direction,
+            });
+            if (embedType === "general") {
+              if (direction === "left" || direction === "right") {
+                setWidth(ref.style.width);
+                updateAttributes({
+                  width: ref.style.width,
+                });
+              } else if (direction === "top" || direction === "bottom") {
+                setHeight(ref.style.height);
+                updateAttributes({
+                  height: ref.style.height,
+                });
+              } else {
+                setWidth(ref.style.width);
+                setHeight(ref.style.height);
+                updateAttributes({
+                  width: ref.style.width,
+                  height: ref.style.height,
+                });
+              }
+            } else {
+              if (editor.isEditable) {
+                setWidth(ref.style.width);
+                setHeight(ref.style.height);
+                updateAttributes({
+                  width: ref.style.width,
+                  height: ref.style.height,
+                });
+              }
             }
           }}
-          lockAspectRatio
+          lockAspectRatio={embedType === "general" ? false : true}
         >
           {embedType === "youtube" && (
             <iframe
