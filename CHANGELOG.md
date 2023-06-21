@@ -1,5 +1,11 @@
 # @avp1598/react-beautiful-editor
 
+## 0.2.2
+
+### Patch Changes
+
+- d92e8f9: remove logs
+
 ## 0.2.1
 
 ### Patch Changes
